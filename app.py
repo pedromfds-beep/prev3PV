@@ -1,3 +1,4 @@
+#PEDROMIGUELSOUSA, 2026, pedromfds@gmail.com
 import requests
 import pandas as pd
 import numpy as np
@@ -324,7 +325,7 @@ with col_bar:
     fig_bar = go.Figure(go.Bar(
         x=bar_labels,
         y=energy_vals,
-        text=[f"<b>{e:.0f} MWh</b>" for e in energy_vals],
+        text=[f"<b>{e:.1f} MWh</b>" for e in energy_vals],
         textposition='outside',
         textfont=dict(size=24, color='#1a252f', family='Arial Black'),
         cliponaxis=False,
