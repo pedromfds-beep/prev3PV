@@ -1,1 +1,1 @@
-Previsão física determinística de produção fotovoltaica contínua com diferentes condições. Cálculo realizado via a biblioteca python pvlib com previsões meteorológicas em tempo real da Open-Meteo
+Aplicação para streamlit. Previsão física determinística de produção fotovoltaica contínua para diferentes condições técnicas. Cálculo realizado via a biblioteca python pvlib com previsões meteorológicas em tempo real da Open-Meteo.
