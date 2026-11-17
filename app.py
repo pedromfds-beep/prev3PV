@@ -306,7 +306,7 @@ with col_map:
         height=400,
         showlegend=False
     )
-    st.plotly_chart(fig_map, use_container_width=True)
+    st.plotly_chart(fig_map, width='content')
 
 with col_bar:
     energy_vals = [daily_mwh[d] for d in daily_dates]
@@ -346,7 +346,7 @@ with col_bar:
             range=[0, max(max_e * 1.45, 1.0)]
         )
     )
-    st.plotly_chart(fig_bar, use_container_width=True)
+    st.plotly_chart(fig_bar, width='content')
 
 st.write("")
 
@@ -379,7 +379,7 @@ with tab1:
         margin=dict(l=40, r=40, t=50, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
     )
-    st.plotly_chart(fig_pow, use_container_width=True)
+    st.plotly_chart(fig_pow, width='content')
 
 # TAB 2: IRRADIAÇÃO
 with tab2:
@@ -401,7 +401,7 @@ with tab2:
         margin=dict(l=40, r=40, t=50, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
     )
-    st.plotly_chart(fig_irr, use_container_width=True)
+    st.plotly_chart(fig_irr, width='content')
 
 # TAB 3: METEOROLOGIA
 with tab3:
@@ -430,7 +430,7 @@ with tab3:
         margin=dict(l=40, r=40, t=50, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
     )
-    st.plotly_chart(fig_met, use_container_width=True)
+    st.plotly_chart(fig_met, width='content')
 
 # TAB 4: GEOMETRIA E TABELA
 with tab4:
@@ -448,10 +448,10 @@ with tab4:
             hovermode="x unified",
             margin=dict(l=40, r=40, t=50, b=40)
         )
-        st.plotly_chart(fig_geom, use_container_width=True)
+        st.plotly_chart(fig_geom, width='content')
     
     st.subheader("📋 Tabela de Previsão Horária")
-    st.dataframe(df_res.style.format(precision=2), height=350, use_container_width=True)
+    st.dataframe(df_res.style.format(precision=2), height=350, width='content')
     
     csv_bytes = df_res.to_csv(index=False).encode('utf-8')
     st.download_button(
